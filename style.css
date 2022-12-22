@@ -15,9 +15,43 @@ body {
   font-family: 'Courier New', Courier, monospace;
   background: var(--bg-color);
   color: var(--font-color);
+  margin: 0;
+  padding: 0;
 }
 
-.app {
+#app {
+  margin: 3vh 5vw;
+}
+
+.header {
+  text-align: right;
+}
+#changeDsp {
+  vertical-align: middle;
+  cursor: pointer;
+}
+#changeCSS {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.main {
+  text-align: center;
+  margin: 5vh 0;
+}
+.clock {
+  font-size: 12vw;
+}
+.sec {
+  font-size: 6vw;
+}
+
+.footer {
+  text-align: center;
+  font-size: 3vw;
+}
+
+/* .app {
   display: flex;
   flex-direction: column;
   margin: 10vw;
@@ -44,4 +78,4 @@ body {
   margin: 5vw;
   padding: 1vw;
   font-size: 3vw;
-}
+} */
