@@ -1,18 +1,19 @@
+'use strict';
 
 function Main() {
   const date = new Date();
-  const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
+  let [hour, minutes, seconds] = [
+    date.getHours(), date.getMinutes(), date.getSeconds()
+  ];
   const clock = document.querySelector('.clock');
   const clocksec = document.querySelector('.sec');
   const today = document.querySelector('.footer');
 
-  let min = minutes;
-  let sec = seconds;
-  if (minutes < 10) { min = `0${minutes}`; }
-  if (seconds < 10) { sec = `0${seconds}`; }
+  if (minutes < 10) minutes = `0${minutes}`;
+  if (seconds < 10) seconds = `0${seconds}`;
 
-  clock.innerHTML = `${hour}:${min}`;
-  clocksec.innerHTML = `:${sec}`;
+  clock.innerHTML = `${hour}:${minutes}`;
+  clocksec.innerHTML = `:${seconds}`;
   today.innerHTML = date.toDateString();
 
   requestAnimationFrame(Main);
