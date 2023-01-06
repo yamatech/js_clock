@@ -40,10 +40,10 @@ body {
   margin: 5vh 0;
 }
 .clock {
-  font-size: 12vw;
+  font-size: 22vw;
 }
 .sec {
-  font-size: 6vw;
+  font-size: 12vw;
 }
 
 .footer {

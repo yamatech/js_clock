@@ -1,13 +1,14 @@
 'use strict';
 
 function Main() {
+  const clock = document.querySelector('.clock');
+  const clocksec = document.querySelector('.sec');
+  const today = document.querySelector('.footer');
+
   const date = new Date();
   let [hour, minutes, seconds] = [
     date.getHours(), date.getMinutes(), date.getSeconds()
   ];
-  const clock = document.querySelector('.clock');
-  const clocksec = document.querySelector('.sec');
-  const today = document.querySelector('.footer');
 
   if (minutes < 10) minutes = `0${minutes}`;
   if (seconds < 10) seconds = `0${seconds}`;
