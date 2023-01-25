@@ -2,9 +2,9 @@
 
 function Main() {
 
-  const clock = document.querySelector('.clock');
-  const clocksec = document.querySelector('.sec');
-  const today = document.querySelector('.footer');
+  const $clock = document.querySelector('.clock');
+  const $sec = document.querySelector('.sec');
+  const $today = document.querySelector('.today');
 
   let date = new Date();
   let [hour, minutes, seconds] = [
@@ -14,9 +14,9 @@ function Main() {
   if (minutes < 10) minutes = `0${minutes}`;
   if (seconds < 10) seconds = `0${seconds}`;
 
-  clock.innerHTML = `${hour}:${minutes}`;
-  clocksec.innerHTML = `:${seconds}`;
-  today.innerHTML = date.toDateString();
+  $clock.innerHTML = `${hour}:${minutes}`;
+  $sec.innerHTML = `:${seconds}`;
+  $today.innerHTML = date.toDateString();
 
   requestAnimationFrame(Main);
 
@@ -26,14 +26,14 @@ Main();
 
 
 // Change stylesheet
-const changeCSS = document.getElementById('changeCSS');
+const $changeCSS = document.getElementById('changeCSS');
 
-changeCSS.addEventListener('click', () => {
+$changeCSS.addEventListener('click', () => {
 
   document.body.classList.toggle('light-mode');
   document.body.classList.toggle('dark-mode');
 
-  const className = document.body.className;
-  className === 'light-mode' ? changeCSS.src = "src/icon1.svg" : changeCSS.src = "src/icon2.svg";
+  const $className = document.body.className;
+  $className === 'light-mode' ? $changeCSS.src = "src/icon1.svg" : $changeCSS.src = "src/icon2.svg";
 
 });

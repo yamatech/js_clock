@@ -43,12 +43,12 @@ body {
   font-size: 22vw;
 }
 .sec {
-  font-size: 12vw;
+  font-size: 14vw;
 }
 
-.footer {
+.today {
   text-align: center;
-  font-size: 3vw;
+  font-size: 5vw;
 }
 
 /* .app {
