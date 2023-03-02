@@ -3,7 +3,7 @@
 function Main() {
 
   const $clock = document.querySelector('.clock');
-  const $sec = document.querySelector('.sec');
+  const $seconds = document.querySelector('.sec');
   const $today = document.querySelector('.today');
 
   let date = new Date();
@@ -15,7 +15,7 @@ function Main() {
   if (seconds < 10) seconds = `0${seconds}`;
 
   $clock.innerHTML = `${hour}:${minutes}`;
-  $sec.innerHTML = `:${seconds}`;
+  $seconds.innerHTML = `:${seconds}`;
   $today.innerHTML = date.toDateString();
 
   requestAnimationFrame(Main);
