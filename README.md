@@ -1,3 +1,3 @@
 # js_clock
-A simple clock made of JavaScript. For web browsers. In the testing phase for PWA.
+A simple clock made of JavaScript. For web browsers. (The testing phase of PWA. But I haven't implemented it yet.)
 
