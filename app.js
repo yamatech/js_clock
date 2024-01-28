@@ -1,5 +1,9 @@
 'use strict';
 
+function padNumber(num) {
+  return num < 10 ? `0${num}` : num;
+}
+
 function updateClock() {
   const clockEl = document.querySelector('.clock');
   const secondsEl = document.querySelector('.sec');
@@ -7,15 +11,8 @@ function updateClock() {
 
   const date = new Date();
   const hour = date.getHours();
-  let minutes = date.getMinutes();
-  let seconds = date.getSeconds();
-
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  if (seconds < 10) {
-    seconds = `0${seconds}`;
-  }
+  const minutes = padNumber(date.getMinutes());
+  const seconds = padNumber(date.getSeconds());
 
   clockEl.textContent = `${hour}:${minutes}`;
   secondsEl.textContent = `:${seconds}`;
@@ -24,16 +21,13 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 
-
 // Change stylesheet
 const changeCSS = document.getElementById('changeCSS');
 
 changeCSS.addEventListener('click', () => {
-
   document.body.classList.toggle('light-mode');
   document.body.classList.toggle('dark-mode');
 
-  const className = document.body.className;
-  className === 'light-mode' ? changeCSS.src = "src/icon1.svg" : changeCSS.src = "src/icon2.svg";
-
+  const isLightMode = document.body.classList.contains('light-mode');
+  changeCSS.src = isLightMode ? "src/icon1.svg" : "src/icon2.svg";
 });
